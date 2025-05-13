@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Algonquin College Rocketry Club - Pushing the boundaries of rocketry and STEM outreach.">
+    <meta name="keywords" content="rocketry, Algonquin College, STEM, aerospace, Launch Canada">
+    <meta name="author" content="ACR">
+    <meta property="og:title" content="Algonquin College Rocketry">
+    <meta property="og:description" content="LC2025 HERE WE LAUCH">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1334666824721236078/1334667979035639859/IMG_5538.jpg?ex=679d5deb&is=679c0c6b&hm=df47a7117d41f457aafb617346e2c299a373eb4564aa36baf729b7b9c62c4522&=&format=webp&width=1138&height=640">
+    <meta property="og:url" content="https://acrocketry.space/index.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://media.discordapp.net/attachments/1334666824721236078/1334667979035639859/IMG_5538.jpg?ex=679d5deb&is=679c0c6b&hm=df47a7117d41f457aafb617346e2c299a373eb4564aa36baf729b7b9c62c4522&=&format=webp&width=1138&height=640">
+    <link rel="icon" type="image/svg+xml" href="Logo.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPEMFZHNG4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DPEMFZHNG4');
+</script>
+
+<style>
+        :root {
+            --primary-color: #4d6149;
+            --secondary-color: #b5b990;
+            --accent-color: #514266;
+            --background-color: #dfddc2;
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+ /* Navbar Styling */
+ .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .donate-button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 5px 11px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .donate-button:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+                /* Mobile Navbar Adjustments */
+                @media (max-width: 991px) {
+            .navbar-nav {
+                background-color: var(--primary-color);
+                position: absolute;
+                width: 100%;
+                top: 56px;
+                left: 0;
+                text-align: center;
+                padding: 20px 0;
+                display: none;
+            }
+
+            .navbar-nav.show {
+                display: block;
+            }
+
+            .navbar-toggler {
+                border: none;
+                background: none;
+                outline: none;
+                font-size: 1.5rem;
+                color: white;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('/rocket-launch.jpg') no-repeat center center/cover;
+            color: #514266;
+            text-align: center;
+            padding: 150px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .contact-form button:hover {
+            background: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .social-icons a {
+            font-size: 1.8rem;
+            color: white;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="Logo.svg" alt="ACR Logo"></a>
+        <button class="navbar-toggler" type="button" id="mobileMenuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="competition.html">Competition</a></li>
+                <li class="nav-item"><a class="nav-link" href=""></a></li>
+                <li class="nav-item"><a class="nav-link" href="sponsors.html">Sponsors (soon)</a></li>
+                <li class="nav-item"><a class="btn donate-button" href="https://donate.acrocketry.space/" target="_blank">Donate</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<script>
+    document.getElementById("mobileMenuToggle").addEventListener("click", function() {
+        document.getElementById("navbarNav").classList.toggle("show");
+    });
+</script>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Algonquin College Rocketry</h1>
+        <p>Website is being built :)</p>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/xdkazawq" method="POST">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Join the team: <a href="https://forms.office.com/r/qaPj4gPtg1" target="_blank" class="donate-button">Apply Here</a></p>
+        <div class="social-icons">
+            <a href="https://linkedin.com/company/acrocketry" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/acrocketry" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/ACRocketry/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/acrocketry" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2024 Algonquin College Rocketry. All Rights Reserved.</p>
+        <!-- NouDa Solutions Signature -->
+<div style="text-align: center; padding: 10px 0; font-size: 12px; font-family: Arial, sans-serif; color: #a0a0a0;">
+    Website designed by 
+    <a href="https://nouda.youkengroups.com" target="_blank" style="color: #a0a0a0; text-decoration: none;" class="a:hover">
+        N<span style="font-style: italic;">ou</span>D<span style="font-style: italic;">a</span> Solutions
+    </a>
+</div>
+
+<style>
+    a:hover {
+        color: #a0a0a0;
+    }
+</style>
+    </footer>
+</body>
+</html>
