@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Algonquin College Rocketry Club - Pushing the boundaries of rocketry and STEM outreach.">
+    <meta name="description" content="Algonquin College Rocketry - Pushing the boundaries of rocketry and STEM outreach.">
     <meta name="keywords" content="rocketry, Algonquin College, STEM, aerospace, Launch Canada">
     <meta name="author" content="ACR">
     <meta property="og:title" content="Algonquin College Rocketry">
-    <meta property="og:description" content="LC2025 HERE WE LAUCH">
+    <meta property="og:description" content="LC2025 HERE WE LAUNCH">
     <meta property="og:image" content="https://media.discordapp.net/attachments/1334666824721236078/1334667979035639859/IMG_5538.jpg?ex=679d5deb&is=679c0c6b&hm=df47a7117d41f457aafb617346e2c299a373eb4564aa36baf729b7b9c62c4522&=&format=webp&width=1138&height=640">
     <meta property="og:url" content="https://acrocketry.space/index.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -20,16 +20,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPEMFZHNG4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPEMFZHNG4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DPEMFZHNG4');
+    </script>
 
-  gtag('config', 'G-DPEMFZHNG4');
-</script>
-
-<style>
+    <style>
         :root {
             --primary-color: #4d6149;
             --secondary-color: #b5b990;
@@ -46,8 +45,8 @@
             padding: 0;
         }
 
- /* Navbar Styling */
- .navbar {
+        /* Navbar Styling */
+        .navbar {
             background-color: var(--primary-color);
             padding: 1rem;
         }
@@ -75,8 +74,9 @@
             background-color: var(--accent-color);
             color: white;
         }
-                /* Mobile Navbar Adjustments */
-                @media (max-width: 991px) {
+
+        /* Mobile Navbar Adjustments */
+        @media (max-width: 991px) {
             .navbar-nav {
                 background-color: var(--primary-color);
                 position: absolute;
@@ -103,15 +103,82 @@
 
         /* Hero Section */
         .hero {
-            background: url('/rocket-launch.jpg') no-repeat center center/cover;
-            color: #514266;
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: white;
             text-align: center;
             padding: 150px 20px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
             font-size: 3.5rem;
             font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mission Section */
+        .mission-section {
+            padding: 80px 0;
+            background-color: var(--background-color);
+        }
+
+        .mission-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sponsorship Section */
+        .sponsorship-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .sponsor-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+
+        .sponsor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .sponsor-tier {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 15px;
         }
 
         /* Contact Form */
@@ -171,69 +238,191 @@
 </head>
 
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="Logo.svg" alt="ACR Logo"></a>
-        <button class="navbar-toggler" type="button" id="mobileMenuToggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="competition.html">Competition</a></li>
-                <li class="nav-item"><a class="nav-link" href=""></a></li>
-                <li class="nav-item"><a class="nav-link" href="sponsors.html">Sponsors (soon)</a></li>
-                <li class="nav-item"><a class="btn donate-button" href="https://donate.acrocketry.space/" target="_blank">Donate</a></li>
-            </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="Logo.svg" alt="ACR Logo"></a>
+            <button class="navbar-toggler" type="button" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="competition.html">Competition</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sponsors.html">Sponsors</a></li>
+                    <li class="nav-item"><a class="btn donate-button" href="https://donate.acrocketry.space/" target="_blank">Donate</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-<script>
-    document.getElementById("mobileMenuToggle").addEventListener("click", function() {
-        document.getElementById("navbarNav").classList.toggle("show");
-    });
-</script>
+    </nav>
+    <script>
+        document.getElementById("mobileMenuToggle").addEventListener("click", function() {
+            document.getElementById("navbarNav").classList.toggle("show");
+        });
+    </script>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Welcome to Algonquin College Rocketry</h1>
-        <p>Website is being built :)</p>
+        <div class="hero-content container">
+            <h1>Igniting the Arc of Innovation to Soar Among the Stars</h1>
+            <p class="lead">Algonquin College Rocketry is a mission-driven collective pushing the boundaries of rocketry and STEM outreach</p>
+            <a href="#contact" class="btn btn-primary btn-lg mt-3">Join Our Mission</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>About Algonquin College Rocketry</h2>
+                    <p>ACR is a multidisciplinary team that aims to design and build a rocket that will reach <strong>Mach 2</strong> and <strong>22,000 feet</strong>. Our team is constantly improving our skills in various fields including mechanical, electrical, robotics, and computer engineering, as well as business, marketing, and graphic design.</p>
+                    <p>We're competing in the <strong>Basic Category</strong> of the <strong>2025 Launch Canada Competition</strong> against universities across Canada, with plans to participate in Launch Canada's <strong>Advanced Category</strong> and the <strong>Spaceport America Cup</strong> in the future.</p>
+                    <a href="about.html" class="btn btn-outline-primary">Learn More About Us</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="team-photo.jpg" alt="ACR Team Photo" class="img-fluid about-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Mission & Goals</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mission-card">
+                        <h3>Short Term Goals</h3>
+                        <ul>
+                            <li>Design, test, build, and successfully launch our rocket</li>
+                            <li>Reach a launch apogee of over 22,000ft and Mach 2</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mission-card">
+                        <h3>Medium Term Goals</h3>
+                        <ul>
+                            <li>Advance to higher levels of the Launch Canada competition</li>
+                            <li>Expand our outreach efforts</li>
+                            <li>Enhance our team self-sufficiency</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mission-card">
+                        <h3>Long Term Goals</h3>
+                        <ul>
+                            <li>Compete in future Launch Canada Competitions</li>
+                            <li>Participate in Spaceport America Cup</li>
+                            <li>Inspire the next generation of STEM professionals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsorship Section -->
+    <section class="sponsorship-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Sponsorship Opportunities</h2>
+            <p class="text-center mb-5">Your support is not just a sponsorship or donation, it's an investment in the future of the engineering and aerospace industry of Canada. Help us soar to new heights!</p>
+            
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="sponsor-card">
+                        <div class="sponsor-tier">DIAMOND ($3,500+)</div>
+                        <ul>
+                            <li>Logo on the rocket (Extra Large)</li>
+                            <li>Logo on all presentations (Large)</li>
+                            <li>Logo on event banners (Large)</li>
+                            <li>Featured company description</li>
+                            <li>Model rocket for display</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="sponsor-card">
+                        <div class="sponsor-tier">GOLD ($2,500)</div>
+                        <ul>
+                            <li>Logo on the rocket (Large)</li>
+                            <li>Logo on presentations (Medium)</li>
+                            <li>Logo on event banners (Medium)</li>
+                            <li>Company description</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="sponsor-card">
+                        <div class="sponsor-tier">SILVER ($1,500)</div>
+                        <ul>
+                            <li>Logo on the rocket (Medium)</li>
+                            <li>Logo on event banners (Small)</li>
+                            <li>Main sponsor title</li>
+                            <li>Access to team resumes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="sponsor-card">
+                        <div class="sponsor-tier">BRONZE (Custom)</div>
+                        <ul>
+                            <li>Logo on the rocket (Small)</li>
+                            <li>Logo on team jackets</li>
+                            <li>Invitation to team events</li>
+                            <li>Social media promotion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="sponsors.html" class="btn btn-primary btn-lg">View Full Sponsorship Package</a>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Form -->
-    <section class="contact-form">
+    <section class="contact-form" id="contact">
         <h2>Contact Us</h2>
+        <p>Interested in joining our team, becoming a sponsor, or learning more about our mission?</p>
         <form action="https://formspree.io/f/xdkazawq" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
+            <select name="subject" class="form-select mb-3">
+                <option value="">Select a subject</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Sponsorship">Sponsorship</option>
+                <option value="Join the Team">Join the Team</option>
+                <option value="Media Inquiry">Media Inquiry</option>
+            </select>
             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send</button>
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Join the team: <a href="https://forms.office.com/r/qaPj4gPtg1" target="_blank" class="donate-button">Apply Here</a></p>
-        <div class="social-icons">
-            <a href="https://linkedin.com/company/acrocketry" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/acrocketry" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/ACRocketry/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/acrocketry" target="_blank"><i class="fab fa-twitter"></i></a>
+        <div class="container">
+            <p>Join the team: <a href="https://forms.office.com/r/qaPj4gPtg1" target="_blank" class="donate-button">Apply Here</a></p>
+            <div class="social-icons">
+                <a href="https://linkedin.com/company/acrocketry" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/acrocketry" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/ACRocketry/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/acrocketry" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2024 Algonquin College Rocketry. All Rights Reserved.</p>
+            <!-- NouDa Solutions Signature -->
+            <div style="text-align: center; padding: 10px 0; font-size: 12px; font-family: Arial, sans-serif; color: #a0a0a0;">
+                Website designed by 
+                <a href="https://nouda.youkengroups.com" target="_blank" style="color: #a0a0a0; text-decoration: none;" class="a:hover">
+                    N<span style="font-style: italic;">ou</span>D<span style="font-style: italic;">a</span> Solutions
+                </a>
+            </div>
         </div>
-        <p>&copy; 2024 Algonquin College Rocketry. All Rights Reserved.</p>
-        <!-- NouDa Solutions Signature -->
-<div style="text-align: center; padding: 10px 0; font-size: 12px; font-family: Arial, sans-serif; color: #a0a0a0;">
-    Website designed by 
-    <a href="https://nouda.youkengroups.com" target="_blank" style="color: #a0a0a0; text-decoration: none;" class="a:hover">
-        N<span style="font-style: italic;">ou</span>D<span style="font-style: italic;">a</span> Solutions
-    </a>
-</div>
-
-<style>
-    a:hover {
-        color: #a0a0a0;
-    }
-</style>
     </footer>
 </body>
 </html>
