@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sponsor Algonquin College Rocketry - Invest in the future of Canadian aerospace and STEM education">
+    <meta name="keywords" content="rocketry sponsorship, STEM investment, aerospace education, Algonquin College">
+    <title>Sponsorship | Algonquin College Rocketry</title>
+    
+    <!-- Use the same stylesheets and scripts as your index.html -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #4d6149;
+            --secondary-color: #b5b990;
+            --accent-color: #514266;
+            --background-color: #dfddc2;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar - same as index.html */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .donate-button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 5px 11px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .donate-button:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Hero Section */
+        .sponsor-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('sponsor-hero.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 150px 20px;
+        }
+
+        .sponsor-hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        /* Why Sponsor Section */
+        .why-sponsor {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .benefit-card {
+            background-color: var(--background-color);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+
+        /* Packages Section */
+        .packages-section {
+            padding: 80px 0;
+            background-color: var(--background-color);
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .package-tier {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .price-tag {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .sponsor-contact {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .contact-card {
+            background-color: var(--background-color);
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        /* Footer - same as index.html */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .social-icons a {
+            font-size: 1.8rem;
+            color: white;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - same as index.html -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="Logo.svg" alt="ACR Logo"></a>
+            <button class="navbar-toggler" type="button" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="competition.html">Competition</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="sponsors.html">Sponsors</a></li>
+                    <li class="nav-item"><a class="btn donate-button" href="https://donate.acrocketry.space/" target="_blank">Donate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script>
+        document.getElementById("mobileMenuToggle").addEventListener("click", function() {
+            document.getElementById("navbarNav").classList.toggle("show");
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="sponsor-hero">
+        <div class="container">
+            <h1>Sponsor Algonquin College Rocketry</h1>
+            <p class="lead"></p>
+        </div>
+    </section>
+
+    <!-- Why Sponsor Section -->
+    <section class="why-sponsor">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Sponsor Us?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-graduation-cap me-2"></i> STEM Education</h3>
+                        <p>Your support directly impacts the education and development of aspiring young professionals in STEM fields, helping to grow tomorrow's leaders in engineering and aerospace.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-users me-2"></i> Community Outreach</h3>
+                        <p>ACR is committed to inspiring the next generation through our outreach programs in elementary and high schools, particularly in low-income areas.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-eye me-2"></i> Brand Visibility</h3>
+                        <p>Your logo will be prominently displayed on our rocket, team uniforms, event banners, and social media, giving you exposure at competitions and community events.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Sponsorship Packages</h2>
+            <div class="row">
+                <!-- Diamond Package -->
+                <div class="col-md-3">
+                    <div class="package-card">
+                        <div class="package-tier">DIAMOND</div>
+                        <div class="price-tag">$3,500+</div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Logo on rocket (Extra Large)</li>
+                            <li><i class="fas fa-check"></i> Logo on presentations (Large)</li>
+                            <li><i class="fas fa-check"></i> Logo on event banners (Large)</li>
+                            <li><i class="fas fa-check"></i> Featured company description</li>
+                            <li><i class="fas fa-check"></i> Model rocket for display</li>
+                            <li><i class="fas fa-check"></i> VIP event invitations</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Gold Package -->
+                <div class="col-md-3">
+                    <div class="package-card">
+                        <div class="package-tier">GOLD</div>
+                        <div class="price-tag">$2,500</div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Logo on rocket (Large)</li>
+                            <li><i class="fas fa-check"></i> Logo on presentations (Medium)</li>
+                            <li><i class="fas fa-check"></i> Logo on event banners (Medium)</li>
+                            <li><i class="fas fa-check"></i> Company description</li>
+                            <li><i class="fas fa-check"></i> Event invitations</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Silver Package -->
+                <div class="col-md-3">
+                    <div class="package-card">
+                        <div class="package-tier">SILVER</div>
+                        <div class="price-tag">$1,500</div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Logo on rocket (Medium)</li>
+                            <li><i class="fas fa-check"></i> Logo on event banners (Small)</li>
+                            <li><i class="fas fa-check"></i> Main sponsor title</li>
+                            <li><i class="fas fa-check"></i> Access to team resumes</li>
+                            <li><i class="fas fa-check"></i> Partnership opportunities</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Bronze Package -->
+                <div class="col-md-3">
+                    <div class="package-card">
+                        <div class="package-tier">BRONZE</div>
+                        <div class="price-tag">$500 min.</div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Logo on rocket (Small)</li>
+                            <li><i class="fas fa-check"></i> Logo on team jackets</li>
+                            <li><i class="fas fa-check"></i> Invitation to team events</li>
+                            <li><i class="fas fa-check"></i> Social media promotion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Sponsorships Section 
+    <section class="why-sponsor">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Custom Sponsorship Opportunities</h2>
+                    <p>We understand that every sponsor has unique goals. We're happy to work with you to create a customized sponsorship package that meets your specific needs and budget.</p>
+                    <p>Options include sponsoring specific components of our rocket, funding our outreach programs, or supporting competition travel expenses.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="custom-sponsor.jpg" alt="Custom Sponsorship Opportunities" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Contact Section -->
+    <section class="sponsor-contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="contact-card">
+                        <h2 class="text-center mb-4">Ready to Become a Sponsor?</h2>
+                        <p class="text-center mb-5">Contact us to discuss sponsorship opportunities or to receive our full sponsorship package.</p>
+                        
+                        <form action="https://formspree.io/f/xdkazawq" method="POST">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" name="company" class="form-control" placeholder="Company Name">
+                            </div>
+                            <div class="mb-3">
+                                <select name="interest" class="form-select">
+                                    <option value="">I'm interested in...</option>
+                                    <option value="Diamond">Diamond Package ($3,500+)</option>
+                                    <option value="Gold">Gold Package ($2,500)</option>
+                                    <option value="Silver">Silver Package ($1,500)</option>
+                                    <option value="Bronze">Bronze Package ($500 min.)</option>
+                                    <option value="Custom">Custom Sponsorship</option>
+                                    <option value="More Info">More Information</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Sponsorship Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - same as index.html -->
+    <footer>
+        <div class="container">
+            <p>Join the team: <a href="https://forms.office.com/r/qaPj4gPtg1" target="_blank" class="donate-button">Apply Here</a></p>
+            <div class="social-icons">
+                <a href="https://linkedin.com/company/acrocketry" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/acrocketry" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/ACRocketry/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/acrocketry" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2024 Algonquin College Rocketry. All Rights Reserved.</p>
+            <!-- NouDa Solutions Signature -->
+            <div style="text-align: center; padding: 10px 0; font-size: 12px; font-family: Arial, sans-serif; color: #a0a0a0;">
+                Website designed by 
+                <a href="https://nouda.youkengroups.com" target="_blank" style="color: #a0a0a0; text-decoration: none;">
+                    N<span style="font-style: italic;">ou</span>D<span style="font-style: italic;">a</span> Solutions
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
