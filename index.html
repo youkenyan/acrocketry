@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Algonquin College Rocketry - Pushing the boundaries of rocketry and STEM outreach.">
     <meta name="keywords" content="rocketry, Algonquin College, STEM, aerospace, Launch Canada">
-    <meta name="author" content="ACR">
-    <meta property="og:title" content="Algonquin College Rocketry">
-    <meta property="og:description" content="LC2025 HERE WE LAUNCH">
-    <meta property="og:image" content="https://media.discordapp.net/attachments/1334666824721236078/1334667979035639859/IMG_5538.jpg?ex=679d5deb&is=679c0c6b&hm=df47a7117d41f457aafb617346e2c299a373eb4564aa36baf729b7b9c62c4522&=&format=webp&width=1138&height=640">
-    <meta property="og:url" content="https://acrocketry.space/index.html">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://media.discordapp.net/attachments/1334666824721236078/1334667979035639859/IMG_5538.jpg?ex=679d5deb&is=679c0c6b&hm=df47a7117d41f457aafb617346e2c299a373eb4564aa36baf729b7b9c62c4522&=&format=webp&width=1138&height=640">
+    <title>Algonquin College Rocketry</title>
+    
+    <!-- Favicon and social meta tags -->
     <link rel="icon" type="image/svg+xml" href="Logo.svg">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" href="/favicon.ico">
+    
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Google tag (gtag.js) -->
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPEMFZHNG4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -43,21 +43,38 @@
             color: #333;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Improved Typography for Mobile */
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+        }
+        
+        .lead {
+            font-size: 1.1rem;
         }
 
         /* Navbar Styling */
         .navbar {
             background-color: var(--primary-color);
-            padding: 1rem;
+            padding: 0.8rem 1rem;
         }
 
         .navbar-brand img {
-            height: 50px;
+            height: 40px;
+            width: auto;
         }
 
         .navbar-nav .nav-link {
             color: white !important;
             font-weight: 500;
+            padding: 0.5rem 1rem;
         }
 
         .donate-button {
@@ -68,6 +85,8 @@
             text-decoration: none;
             font-weight: bold;
             transition: background-color 0.3s;
+            display: inline-block;
+            margin: 0.5rem 0;
         }
 
         .donate-button:hover {
@@ -77,6 +96,14 @@
 
         /* Mobile Navbar Adjustments */
         @media (max-width: 991px) {
+            .navbar {
+                padding: 0.5rem 1rem;
+            }
+            
+            .navbar-brand img {
+                height: 35px;
+            }
+            
             .navbar-nav {
                 background-color: var(--primary-color);
                 position: absolute;
@@ -84,8 +111,9 @@
                 top: 56px;
                 left: 0;
                 text-align: center;
-                padding: 20px 0;
+                padding: 10px 0;
                 display: none;
+                z-index: 1000;
             }
 
             .navbar-nav.show {
@@ -98,16 +126,24 @@
                 outline: none;
                 font-size: 1.5rem;
                 color: white;
+                padding: 0.25rem 0.5rem;
+            }
+            
+            .donate-button {
+                margin: 0.5rem auto;
+                display: block;
+                width: fit-content;
             }
         }
 
-        /* Hero Section */
+        /* Hero Section - Mobile Optimized */
         .hero {
-            background: url('hero-bg.jpg') no-repeat center center/cover;
+            background: url('hero-bg-mobile.jpg') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 150px 20px;
+            padding: 100px 20px;
             position: relative;
+            min-height: 60vh;
         }
 
         .hero::before {
@@ -126,113 +162,121 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .hero .lead {
+            font-size: 1rem;
             margin-bottom: 20px;
         }
-
-        /* About Section */
-        .about-section {
-            padding: 80px 0;
-            background-color: white;
+        
+        .hero .btn {
+            padding: 8px 20px;
+            font-size: 1rem;
         }
 
-        .about-image {
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Mission Section */
-        .mission-section {
-            padding: 80px 0;
-            background-color: var(--background-color);
-        }
-
-        .mission-card {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Sponsorship Section */
+        /* Section Padding for Mobile */
+        .about-section,
+        .mission-section,
         .sponsorship-section {
-            padding: 80px 0;
-            background-color: white;
+            padding: 50px 0;
         }
 
+        /* About Section - Mobile Layout */
+        .about-section .row {
+            flex-direction: column-reverse;
+        }
+        
+        .about-section .col-md-6 {
+            padding: 0 15px;
+            margin-bottom: 20px;
+        }
+        
+        .about-image {
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Mission Cards - Stack on Mobile */
+        .mission-card {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        /* Sponsorship Cards - Single Column on Mobile */
         .sponsor-card {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: transform 0.3s;
+            margin-bottom: 20px;
         }
-
-        .sponsor-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
+        
         .sponsor-tier {
-            font-weight: bold;
-            color: var(--accent-color);
-            margin-bottom: 15px;
+            font-size: 1.2rem;
         }
 
-        /* Contact Form */
+        /* Contact Form - Full Width on Mobile */
         .contact-form {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            margin: 30px auto;
+            padding: 20px;
         }
-
+        
         .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
+        .contact-form textarea,
+        .contact-form select {
+            font-size: 0.9rem;
+            padding: 10px;
         }
 
-        .contact-form button {
-            width: 100%;
-            padding: 12px;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .contact-form button:hover {
-            background: var(--accent-color);
-        }
-
-        /* Footer */
+        /* Footer Adjustments */
         footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 20px 0;
-            text-align: center;
+            padding: 15px 0;
         }
-
+        
         .social-icons a {
-            font-size: 1.8rem;
-            color: white;
-            margin: 0 10px;
-            transition: color 0.3s;
+            font-size: 1.5rem;
+            margin: 0 8px;
         }
-
-        .social-icons a:hover {
-            color: var(--secondary-color);
+        
+        /* Image Optimization */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Button Sizes for Mobile */
+        .btn {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+        
+        .btn-lg {
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+        
+        /* Hide large images on mobile */
+        @media (max-width: 767px) {
+            .hero {
+                background-image: url('hero-bg-mobile.jpg');
+            }
+        }
+        
+        /* Larger screens */
+        @media (min-width: 768px) {
+            .hero {
+                background-image: url('hero-bg.jpg');
+                padding: 150px 20px;
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .hero h1 {
+                font-size: 3.5rem;
+            }
         }
     </style>
 </head>
@@ -266,7 +310,7 @@
         <div class="hero-content container">
             <h1>Igniting the Arc of Innovation to Soar Among the Stars</h1>
             <p class="lead">Algonquin College Rocketry is a mission-driven collective pushing the boundaries of rocketry and STEM outreach</p>
-            <a href="#contact" class="btn donate-button btn-lg mt-3">Join Our Mission</a>
+            <a href="#contact" class="btn donate-button btn-lg">Join Our Mission</a>
         </div>
     </section>
 
@@ -290,7 +334,7 @@
     <!-- Mission Section -->
     <section class="mission-section">
         <div class="container">
-            <h2 class="text-center mb-5">Our Mission & Goals</h2>
+            <h2 class="text-center mb-4">Our Mission & Goals</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="mission-card">
@@ -328,45 +372,45 @@
     <!-- Sponsorship Section -->
     <section class="sponsorship-section">
         <div class="container">
-            <h2 class="text-center mb-5">Sponsorship Opportunities</h2>
-            <p class="text-center mb-5">Your support is not just a sponsorship or donation, it's an investment in the future of the engineering and aerospace industry of Canada. Help us soar to new heights!</p>
+            <h2 class="text-center mb-4">Sponsorship Opportunities</h2>
+            <p class="text-center mb-4">Your support is an investment in the future of Canadian aerospace. Help us soar to new heights!</p>
             
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <div class="sponsor-card">
                         <div class="sponsor-tier">DIAMOND ($3,500+)</div>
                         <ul>
-                            <li>Logo on the rocket (Extra Large)</li>
-                            <li>Logo on all presentations (Large)</li>
-                            <li>Logo on event banners (Large)</li>
+                            <li>Logo on the rocket (XL)</li>
+                            <li>Logo on presentations (Large)</li>
+                            <li>Logo on event banners</li>
                             <li>Featured company description</li>
                             <li>Model rocket for display</li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <div class="sponsor-card">
                         <div class="sponsor-tier">GOLD ($2,500)</div>
                         <ul>
                             <li>Logo on the rocket (Large)</li>
-                            <li>Logo on presentations (Medium)</li>
-                            <li>Logo on event banners (Medium)</li>
+                            <li>Logo on presentations</li>
+                            <li>Logo on event banners</li>
                             <li>Company description</li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <div class="sponsor-card">
                         <div class="sponsor-tier">SILVER ($1,500)</div>
                         <ul>
                             <li>Logo on the rocket (Medium)</li>
-                            <li>Logo on event banners (Small)</li>
+                            <li>Logo on event banners</li>
                             <li>Main sponsor title</li>
                             <li>Access to team resumes</li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <div class="sponsor-card">
                         <div class="sponsor-tier">BRONZE ($500 min.)</div>
                         <ul>
@@ -379,7 +423,7 @@
                 </div>
             </div>
             
-            <div class="text-center mt-5">
+            <div class="text-center mt-3">
                 <a href="sponsors.html" class="btn donate-button btn-lg">View Full Sponsorship Package</a>
             </div>
         </div>
@@ -388,7 +432,7 @@
     <!-- Contact Form -->
     <section class="contact-form" id="contact">
         <h2>Contact Us</h2>
-        <p>Interested in joining our team, becoming a sponsor, or learning more about our mission?</p>
+        <p>Interested in joining our team, becoming a sponsor, or learning more?</p>
         <form action="https://formspree.io/f/xdkazawq" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
@@ -399,7 +443,7 @@
                 <option value="Join the Team">Join the Team</option>
                 <option value="Media Inquiry">Media Inquiry</option>
             </select>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
@@ -415,12 +459,8 @@
                 <a href="https://twitter.com/acrocketry" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
             <p>&copy; 2024 Algonquin College Rocketry. All Rights Reserved.</p>
-            <!-- NouDa Solutions Signature -->
-            <div style="text-align: center; padding: 10px 0; font-size: 12px; font-family: Arial, sans-serif; color: #a0a0a0;">
-                Website designed by 
-                <a href="https://nouda.youkengroups.com" target="_blank" style="color: #a0a0a0; text-decoration: none;" class="a:hover">
-                    N<span style="font-style: italic;">ou</span>D<span style="font-style: italic;">a</span> Solutions
-                </a>
+            <div class="text-center" style="padding: 10px 0; font-size: 12px; color: #a0a0a0;">
+                Website by <a href="https://nouda.youkengroups.com" target="_blank" style="color: #a0a0a0;">NouDa Solutions</a>
             </div>
         </div>
     </footer>
